@@ -4,49 +4,87 @@
 #include <SDL_image.h>
 
 SDL_Window* displayWindow;
+GLuint LoadTexture(const char *image_path) {
+    SDL_Surface *surface = IMG_Load(image_path);
+    GLuint textureID;
+    glGenTextures(1, &textureID);
+    glBindTexture(GL_TEXTURE_2D, textureID);
+    glTexImage2D(GL_TEXTURE_2D, 0, GL_RGBA, surface->w, surface->h, 0, GL_RGBA,
+                 GL_UNSIGNED_BYTE, surface->pixels);
+    glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MIN_FILTER, GL_LINEAR);
+    glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MAG_FILTER, GL_LINEAR);
+    SDL_FreeSurface(surface);
+    return textureID;
+}
+
+void DrawSprite(GLint texture, float x, float y, float rotation) {
+    glEnable(GL_TEXTURE_2D);
+    glBindTexture(GL_TEXTURE_2D, texture);
+    glMatrixMode(GL_MODELVIEW);
+    glLoadIdentity();
+    glTranslatef(x, y, 0.0);
+    glRotatef(rotation, 0.0, 0.0, 1.0);
+    GLfloat quad[] = {-0.1f, 0.1f, -0.1f, -0.1f, 0.1f, -0.1f, 0.1f, 0.1f};
+    glVertexPointer(2, GL_FLOAT, 0, quad);
+    glEnableClientState(GL_VERTEX_ARRAY);
+    GLfloat quadUVs[] = {0.0, 0.0, 0.0, 1.0, 1.0, 1.0, 1.0, 0.0};
+    glTexCoordPointer(2, GL_FLOAT, 0, quadUVs);
+    glEnableClientState(GL_TEXTURE_COORD_ARRAY);
+    glEnable(GL_BLEND);
+    glBlendFunc(GL_SRC_ALPHA, GL_ONE_MINUS_SRC_ALPHA);
+    glDrawArrays(GL_QUADS, 0, 4);
+    glDisable(GL_TEXTURE_2D);
+}
+
+void DrawTriangle(){
+    GLfloat triangle[] = {-0.1f, 0.1f, -0.1f, -0.1f, 0.1f, -0.1};
+    glTranslatef(-0.5, 0.5, 0);
+    glVertexPointer(2, GL_FLOAT, 0, triangle);
+    glEnableClientState(GL_VERTEX_ARRAY);
+    GLfloat triangleColors[] = {-0.1f, 0.1f, -0.1f, -0.1f, 0.1f, -0.1};
+    glColorPointer(3, GL_FLOAT, 0, triangleColors);
+    glEnableClientState(GL_COLOR_ARRAY);
+    glDrawArrays(GL_TRIANGLES, 0, 3);
+}
 
 int main(int argc, char *argv[])
 {
-	SDL_Init(SDL_INIT_VIDEO);
-	displayWindow = SDL_CreateWindow("My Game", SDL_WINDOWPOS_CENTERED, SDL_WINDOWPOS_CENTERED, 800, 600, SDL_WINDOW_OPENGL);
-	SDL_GLContext context = SDL_GL_CreateContext(displayWindow);
-	SDL_GL_MakeCurrent(displayWindow, context);
+    SDL_Init(SDL_INIT_VIDEO);
+    displayWindow = SDL_CreateWindow("My Game", SDL_WINDOWPOS_CENTERED, SDL_WINDOWPOS_CENTERED, 800, 600, SDL_WINDOW_OPENGL);
+    SDL_GLContext context = SDL_GL_CreateContext(displayWindow);
+    SDL_GL_MakeCurrent(displayWindow, context);
     
-	bool done = false;
-	
-	SDL_Event event;
+    bool done = false;
     
-        glViewport(0, 0, 800, 600); //sets the pixel size and offset of redering area.
-        glMatrixMode(GL_PROJECTION);
-        glMatrixMode(GL_MODELVIEW);
-        glOrtho(-1.33, 1.33, -1.0, 1.0, -1.0, 1.0); // multiplies the currently selected amtrix with and orthographic projection matrix
+    float lastFrameTicks = 0.0f;
+    float ticks = (float)SDL_GetTicks()/1000.0f;
+    float elapsed = ticks - lastFrameTicks;
+    lastFrameTicks = ticks;
+    float rotation;
     
-	while (!done) {
-		while (SDL_PollEvent(&event)) {
-			if (event.type == SDL_QUIT || event.type == SDL_WINDOWEVENT_CLOSE) {
-				done = true;
-			}
-		}
+    SDL_Event event;
+
+    
+    while (!done) {
+        while (SDL_PollEvent(&event)) {
+            if (event.type == SDL_QUIT || event.type == SDL_WINDOWEVENT_CLOSE) {
+                done = true;
+            }
+        }
         
         glClear(GL_COLOR_BUFFER_BIT);
+        glClearColor(0.8f, 0.8f, 0.6f, 1.0f);
         
-        GLfloat triangle[] = {0.0f, 0.5f, -0.5f, -0.5f, 0.5f, -0.5f}; //triagnle position
-        glVertexPointer(2, GL_FLOAT, 0, triangle);
-        glEnableClientState(GL_VERTEX_ARRAY);//enable
-        GLfloat triangleColors[] = {1.0, 0.0, 0.0,0.0, 1.0,0.0,0.0,0.0,1.0};//triangle color
-        glColorPointer(3, GL_FLOAT, 0, triangleColors);
-        glEnableClientState(GL_COLOR_ARRAY);//ENABLE
-        glDrawArrays(GL_TRIANGLES, 0, 3);
-        
-        glLoadIdentity();
-        glTranslatef(0.5 , 0.5, 0.0);
-        glRotated(45.0f, 0.0, 0.0, 1.0);
-        glScalef(2.0, 1.0, 1.0);
-        glClearColor(0.4f, 0.2f, 0.8f, 1.0f); //set the clear color of screen
-        //glClear(GL_COLOR_BUFFER_BIT);
-		SDL_GL_SwapWindow(displayWindow);
-	}
+        rotation += elapsed;
+        DrawSprite(LoadTexture("transparentLight26.png"), 0.5, 0.5, rotation);
+        DrawSprite(LoadTexture("transparentLight27.png"), -0.5, -0.5, rotation);
+        DrawSprite(LoadTexture("transparentLight28.png"), -0.0, -0.0, rotation);
+        DrawTriangle();
+
+
+        SDL_GL_SwapWindow(displayWindow);
+    }
     
-	SDL_Quit();
-	return 0;
+    SDL_Quit();
+    return 0;
 }

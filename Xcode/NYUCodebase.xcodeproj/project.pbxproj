@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		17F440801A8821A30037FDFC /* transparentLight26.png in Resources */ = {isa = PBXBuildFile; fileRef = 17F4407D1A8821A30037FDFC /* transparentLight26.png */; };
+		17F440811A8821A30037FDFC /* transparentLight27.png in Resources */ = {isa = PBXBuildFile; fileRef = 17F4407E1A8821A30037FDFC /* transparentLight27.png */; };
+		17F440821A8821A30037FDFC /* transparentLight28.png in Resources */ = {isa = PBXBuildFile; fileRef = 17F4407F1A8821A30037FDFC /* transparentLight28.png */; };
+		17FAEB021A86A06B00317CDE /* 1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 17FAEB011A86A06B00317CDE /* 1.jpg */; };
 		6D5A86AE19AE5C710066C1FD /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6D5A86AD19AE5C710066C1FD /* Cocoa.framework */; };
 		6D5A86B819AE5C710066C1FD /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 6D5A86B619AE5C710066C1FD /* InfoPlist.strings */; };
 		6D5A86BA19AE5C710066C1FD /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 6D5A86B919AE5C710066C1FD /* main.cpp */; };
@@ -18,6 +22,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		17F4407D1A8821A30037FDFC /* transparentLight26.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = transparentLight26.png; sourceTree = "<group>"; };
+		17F4407E1A8821A30037FDFC /* transparentLight27.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = transparentLight27.png; sourceTree = "<group>"; };
+		17F4407F1A8821A30037FDFC /* transparentLight28.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = transparentLight28.png; sourceTree = "<group>"; };
+		17FAEB011A86A06B00317CDE /* 1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 1.jpg; sourceTree = "<group>"; };
 		6D5A86AA19AE5C710066C1FD /* NYUCodebase.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NYUCodebase.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6D5A86AD19AE5C710066C1FD /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
 		6D5A86B019AE5C710066C1FD /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
@@ -101,7 +109,11 @@
 		6D5A86B419AE5C710066C1FD /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				17F4407D1A8821A30037FDFC /* transparentLight26.png */,
+				17F4407E1A8821A30037FDFC /* transparentLight27.png */,
+				17F4407F1A8821A30037FDFC /* transparentLight28.png */,
 				6D5A86C519AE5C710066C1FD /* Images.xcassets */,
+				17FAEB011A86A06B00317CDE /* 1.jpg */,
 				6D5A86B519AE5C710066C1FD /* NYUCodebase-Info.plist */,
 				6D5A86B619AE5C710066C1FD /* InfoPlist.strings */,
 				6D5A86BC19AE5C710066C1FD /* Credits.rtf */,
@@ -171,7 +183,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				6D5A86B819AE5C710066C1FD /* InfoPlist.strings in Resources */,
+				17FAEB021A86A06B00317CDE /* 1.jpg in Resources */,
+				17F440821A8821A30037FDFC /* transparentLight28.png in Resources */,
 				6D5A86C619AE5C710066C1FD /* Images.xcassets in Resources */,
+				17F440801A8821A30037FDFC /* transparentLight26.png in Resources */,
+				17F440811A8821A30037FDFC /* transparentLight27.png in Resources */,
 				6D5A86BE19AE5C710066C1FD /* Credits.rtf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

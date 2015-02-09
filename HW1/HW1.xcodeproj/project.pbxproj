@@ -10,7 +10,6 @@
 		17F440801A8821A30037FDFC /* transparentLight26.png in Resources */ = {isa = PBXBuildFile; fileRef = 17F4407D1A8821A30037FDFC /* transparentLight26.png */; };
 		17F440811A8821A30037FDFC /* transparentLight27.png in Resources */ = {isa = PBXBuildFile; fileRef = 17F4407E1A8821A30037FDFC /* transparentLight27.png */; };
 		17F440821A8821A30037FDFC /* transparentLight28.png in Resources */ = {isa = PBXBuildFile; fileRef = 17F4407F1A8821A30037FDFC /* transparentLight28.png */; };
-		17FAEB021A86A06B00317CDE /* 1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 17FAEB011A86A06B00317CDE /* 1.jpg */; };
 		6D5A86AE19AE5C710066C1FD /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6D5A86AD19AE5C710066C1FD /* Cocoa.framework */; };
 		6D5A86B819AE5C710066C1FD /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 6D5A86B619AE5C710066C1FD /* InfoPlist.strings */; };
 		6D5A86BA19AE5C710066C1FD /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 6D5A86B919AE5C710066C1FD /* main.cpp */; };
@@ -25,13 +24,12 @@
 		17F4407D1A8821A30037FDFC /* transparentLight26.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = transparentLight26.png; sourceTree = "<group>"; };
 		17F4407E1A8821A30037FDFC /* transparentLight27.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = transparentLight27.png; sourceTree = "<group>"; };
 		17F4407F1A8821A30037FDFC /* transparentLight28.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = transparentLight28.png; sourceTree = "<group>"; };
-		17FAEB011A86A06B00317CDE /* 1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 1.jpg; sourceTree = "<group>"; };
-		6D5A86AA19AE5C710066C1FD /* NYUCodebase.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NYUCodebase.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		6D5A86AA19AE5C710066C1FD /* HW1.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HW1.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6D5A86AD19AE5C710066C1FD /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
 		6D5A86B019AE5C710066C1FD /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
 		6D5A86B119AE5C710066C1FD /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 		6D5A86B219AE5C710066C1FD /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
-		6D5A86B519AE5C710066C1FD /* NYUCodebase-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "NYUCodebase-Info.plist"; sourceTree = "<group>"; };
+		6D5A86B519AE5C710066C1FD /* HW1-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "HW1-Info.plist"; sourceTree = "<group>"; };
 		6D5A86B719AE5C710066C1FD /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		6D5A86B919AE5C710066C1FD /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
 		6D5A86BD19AE5C710066C1FD /* en */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; name = en; path = en.lproj/Credits.rtf; sourceTree = "<group>"; };
@@ -60,7 +58,7 @@
 		6D5A86A119AE5C710066C1FD = {
 			isa = PBXGroup;
 			children = (
-				6D5A86B319AE5C710066C1FD /* NYUCodebase */,
+				6D5A86B319AE5C710066C1FD /* HW1 */,
 				6D5A86AC19AE5C710066C1FD /* Frameworks */,
 				6D5A86AB19AE5C710066C1FD /* Products */,
 			);
@@ -69,7 +67,7 @@
 		6D5A86AB19AE5C710066C1FD /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				6D5A86AA19AE5C710066C1FD /* NYUCodebase.app */,
+				6D5A86AA19AE5C710066C1FD /* HW1.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -97,12 +95,13 @@
 			name = "Other Frameworks";
 			sourceTree = "<group>";
 		};
-		6D5A86B319AE5C710066C1FD /* NYUCodebase */ = {
+		6D5A86B319AE5C710066C1FD /* HW1 */ = {
 			isa = PBXGroup;
 			children = (
 				6D5A86E119AE5CAA0066C1FD /* Code */,
 				6D5A86B419AE5C710066C1FD /* Supporting Files */,
 			);
+			name = HW1;
 			path = NYUCodebase;
 			sourceTree = "<group>";
 		};
@@ -113,8 +112,7 @@
 				17F4407E1A8821A30037FDFC /* transparentLight27.png */,
 				17F4407F1A8821A30037FDFC /* transparentLight28.png */,
 				6D5A86C519AE5C710066C1FD /* Images.xcassets */,
-				17FAEB011A86A06B00317CDE /* 1.jpg */,
-				6D5A86B519AE5C710066C1FD /* NYUCodebase-Info.plist */,
+				6D5A86B519AE5C710066C1FD /* HW1-Info.plist */,
 				6D5A86B619AE5C710066C1FD /* InfoPlist.strings */,
 				6D5A86BC19AE5C710066C1FD /* Credits.rtf */,
 			);
@@ -132,9 +130,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		6D5A86A919AE5C710066C1FD /* NYUCodebase */ = {
+		6D5A86A919AE5C710066C1FD /* HW1 */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 6D5A86DB19AE5C710066C1FD /* Build configuration list for PBXNativeTarget "NYUCodebase" */;
+			buildConfigurationList = 6D5A86DB19AE5C710066C1FD /* Build configuration list for PBXNativeTarget "HW1" */;
 			buildPhases = (
 				6D5A86A619AE5C710066C1FD /* Sources */,
 				6D5A86A719AE5C710066C1FD /* Frameworks */,
@@ -144,9 +142,9 @@
 			);
 			dependencies = (
 			);
-			name = NYUCodebase;
+			name = HW1;
 			productName = NYUCodebase;
-			productReference = 6D5A86AA19AE5C710066C1FD /* NYUCodebase.app */;
+			productReference = 6D5A86AA19AE5C710066C1FD /* HW1.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -159,7 +157,7 @@
 				LastUpgradeCheck = 0510;
 				ORGANIZATIONNAME = "Ivan Safrin";
 			};
-			buildConfigurationList = 6D5A86A519AE5C710066C1FD /* Build configuration list for PBXProject "NYUCodebase" */;
+			buildConfigurationList = 6D5A86A519AE5C710066C1FD /* Build configuration list for PBXProject "HW1" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -172,7 +170,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				6D5A86A919AE5C710066C1FD /* NYUCodebase */,
+				6D5A86A919AE5C710066C1FD /* HW1 */,
 			);
 		};
 /* End PBXProject section */
@@ -183,7 +181,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				6D5A86B819AE5C710066C1FD /* InfoPlist.strings in Resources */,
-				17FAEB021A86A06B00317CDE /* 1.jpg in Resources */,
 				17F440821A8821A30037FDFC /* transparentLight28.png in Resources */,
 				6D5A86C619AE5C710066C1FD /* Images.xcassets in Resources */,
 				17F440801A8821A30037FDFC /* transparentLight26.png in Resources */,
@@ -313,9 +310,9 @@
 					/Library/Frameworks/SDL2_image.framework/Versions/A/Headers,
 					/Library/Frameworks/SDL2.framework/Versions/A/Headers,
 				);
-				INFOPLIST_FILE = "NYUCodebase/NYUCodebase-Info.plist";
+				INFOPLIST_FILE = "NYUCodebase/HW1-Info.plist";
 				"OTHER_CODE_SIGN_FLAGS[sdk=*]" = "";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = HW1;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -337,9 +334,9 @@
 					/Library/Frameworks/SDL2_image.framework/Versions/A/Headers,
 					/Library/Frameworks/SDL2.framework/Versions/A/Headers,
 				);
-				INFOPLIST_FILE = "NYUCodebase/NYUCodebase-Info.plist";
+				INFOPLIST_FILE = "NYUCodebase/HW1-Info.plist";
 				"OTHER_CODE_SIGN_FLAGS[sdk=*]" = "--deep";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = HW1;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
@@ -347,7 +344,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		6D5A86A519AE5C710066C1FD /* Build configuration list for PBXProject "NYUCodebase" */ = {
+		6D5A86A519AE5C710066C1FD /* Build configuration list for PBXProject "HW1" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				6D5A86D919AE5C710066C1FD /* Debug */,
@@ -356,7 +353,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		6D5A86DB19AE5C710066C1FD /* Build configuration list for PBXNativeTarget "NYUCodebase" */ = {
+		6D5A86DB19AE5C710066C1FD /* Build configuration list for PBXNativeTarget "HW1" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				6D5A86DC19AE5C710066C1FD /* Debug */,

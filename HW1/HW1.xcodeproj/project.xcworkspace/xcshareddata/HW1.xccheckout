@@ -5,16 +5,16 @@
 	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
 	<false/>
 	<key>IDESourceControlProjectIdentifier</key>
-	<string>08AD4E33-6AC4-4206-955A-A7DF697342E5</string>
+	<string>47CE5304-4C2A-40E1-AC9F-2CE9C15C9C41</string>
 	<key>IDESourceControlProjectName</key>
-	<string>NYUCodebase</string>
+	<string>HW1</string>
 	<key>IDESourceControlProjectOriginsDictionary</key>
 	<dict>
 		<key>516637673EEE6E8CB8FDBD67C37A80F2C33C91DF</key>
 		<string>https://github.com/gzz20071010/CS3113GameProgramming.git</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
-	<string>Xcode/NYUCodebase.xcodeproj</string>
+	<string>HW1/HW1.xcodeproj</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
 		<key>516637673EEE6E8CB8FDBD67C37A80F2C33C91DF</key>

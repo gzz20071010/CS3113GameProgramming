@@ -15,9 +15,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "6D5A86A919AE5C710066C1FD"
-               BuildableName = "NYUCodebase.app"
-               BlueprintName = "NYUCodebase"
-               ReferencedContainer = "container:NYUCodebase.xcodeproj">
+               BuildableName = "HW1.app"
+               BlueprintName = "HW1"
+               ReferencedContainer = "container:HW1.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
          <BuildActionEntry
@@ -31,7 +31,7 @@
                BlueprintIdentifier = "6D5A86CA19AE5C710066C1FD"
                BuildableName = "NYUCodebaseTests.xctest"
                BlueprintName = "NYUCodebaseTests"
-               ReferencedContainer = "container:NYUCodebase.xcodeproj">
+               ReferencedContainer = "container:HW1.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -49,7 +49,7 @@
                BlueprintIdentifier = "6D5A86CA19AE5C710066C1FD"
                BuildableName = "NYUCodebaseTests.xctest"
                BlueprintName = "NYUCodebaseTests"
-               ReferencedContainer = "container:NYUCodebase.xcodeproj">
+               ReferencedContainer = "container:HW1.xcodeproj">
             </BuildableReference>
          </TestableReference>
       </Testables>
@@ -57,9 +57,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "6D5A86A919AE5C710066C1FD"
-            BuildableName = "NYUCodebase.app"
-            BlueprintName = "NYUCodebase"
-            ReferencedContainer = "container:NYUCodebase.xcodeproj">
+            BuildableName = "HW1.app"
+            BlueprintName = "HW1"
+            ReferencedContainer = "container:HW1.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
    </TestAction>
@@ -76,9 +76,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "6D5A86A919AE5C710066C1FD"
-            BuildableName = "NYUCodebase.app"
-            BlueprintName = "NYUCodebase"
-            ReferencedContainer = "container:NYUCodebase.xcodeproj">
+            BuildableName = "HW1.app"
+            BlueprintName = "HW1"
+            ReferencedContainer = "container:HW1.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
       <AdditionalOptions>
@@ -94,9 +94,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "6D5A86A919AE5C710066C1FD"
-            BuildableName = "NYUCodebase.app"
-            BlueprintName = "NYUCodebase"
-            ReferencedContainer = "container:NYUCodebase.xcodeproj">
+            BuildableName = "HW1.app"
+            BlueprintName = "HW1"
+            ReferencedContainer = "container:HW1.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>

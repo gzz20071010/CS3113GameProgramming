@@ -37,11 +37,14 @@ void DrawSprite(GLint texture, float x, float y, float rotation) {
 }
 
 void DrawTriangle(){
+    glMatrixMode(GL_MODELVIEW);
+    glLoadIdentity();
     GLfloat triangle[] = {-0.1f, 0.1f, -0.1f, -0.1f, 0.1f, -0.1};
     glTranslatef(-0.5, 0.5, 0);
     glVertexPointer(2, GL_FLOAT, 0, triangle);
     glEnableClientState(GL_VERTEX_ARRAY);
-    GLfloat triangleColors[] = {-0.1f, 0.1f, -0.1f, -0.1f, 0.1f, -0.1};
+    GLfloat triangleColors[] = {1.0, 0.0, 0.0, 0.0, 1.0, 0.0, 0.0,
+        0.0, 1.0};
     glColorPointer(3, GL_FLOAT, 0, triangleColors);
     glEnableClientState(GL_COLOR_ARRAY);
     glDrawArrays(GL_TRIANGLES, 0, 3);
@@ -57,10 +60,11 @@ int main(int argc, char *argv[])
     bool done = false;
     
     float lastFrameTicks = 0.0f;
-    float ticks = (float)SDL_GetTicks()/1000.0f;
+    float ticks = (float)SDL_GetTicks()/200.0f;
     float elapsed = ticks - lastFrameTicks;
     lastFrameTicks = ticks;
     float rotation;
+
     
     SDL_Event event;
 
@@ -74,11 +78,11 @@ int main(int argc, char *argv[])
         
         glClear(GL_COLOR_BUFFER_BIT);
         glClearColor(0.8f, 0.8f, 0.6f, 1.0f);
-        
         rotation += elapsed;
-        DrawSprite(LoadTexture("transparentLight26.png"), 0.5, 0.5, rotation);
+
+        DrawSprite(LoadTexture("transparentLight26.png"), 0.5, 0.5, 0);
         DrawSprite(LoadTexture("transparentLight27.png"), -0.5, -0.5, rotation);
-        DrawSprite(LoadTexture("transparentLight28.png"), -0.0, -0.0, rotation);
+        DrawSprite(LoadTexture("transparentLight28.png"), -0.0, -0.0, -rotation);
         DrawTriangle();
 
 

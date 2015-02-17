@@ -16,17 +16,17 @@ void pongUpdate(float elapsed ){
     
     if (pongCollisionCheck() == 1) {                  // pong colliding with paddleLeft
         pong.velocity_x *= -1.0f;					// Reverse the x velocity
-        pong.x += pong.velocity_x / 150.0f;			// Add in an offset
+        pong.x += (pong.velocity_x /2000.0f);
     }
 
     else if (pongCollisionCheck() == 2) {
         pong.velocity_x *= -1.0f;
-        pong.x += pong.velocity_x / 150.0f;
+        pong.x += pong.velocity_x / 2000.0f;
     }
     
     else if (pongCollisionCheck() == 3) {           // pong collided with wall
         pong.velocity_y *= -1.0f;					// Reverse the y velocity
-        pong.y += pong.velocity_y / 90.0f;
+        pong.y += pong.velocity_y / 2000.0f;
     }
     
     pong.x += pong.velocity_x * elapsed;               //move pong

@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>40DC6D8E-BD16-4A49-B630-04F2583AFD14</string>
+	<key>IDESourceControlProjectName</key>
+	<string>HW2</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>516637673EEE6E8CB8FDBD67C37A80F2C33C91DF</key>
+		<string>https://github.com/gzz20071010/CS3113GameProgramming.git</string>
+		<key>651E2F8641B126D1334D5DF735062A462B9756DD</key>
+		<string>https://github.com/RiasKlein/ShunmanTse-CS3113-HW2.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>HW2/HW2.xcodeproj</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>516637673EEE6E8CB8FDBD67C37A80F2C33C91DF</key>
+		<string>../../..</string>
+		<key>651E2F8641B126D1334D5DF735062A462B9756DD</key>
+		<string>../../../../ShunmanTse-CS3113-HW2</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/gzz20071010/CS3113GameProgramming.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>111</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>516637673EEE6E8CB8FDBD67C37A80F2C33C91DF</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>516637673EEE6E8CB8FDBD67C37A80F2C33C91DF</string>
+			<key>IDESourceControlWCCName</key>
+			<string>CS3113GameProgramming</string>
+		</dict>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>651E2F8641B126D1334D5DF735062A462B9756DD</string>
+			<key>IDESourceControlWCCName</key>
+			<string>ShunmanTse-CS3113-HW2</string>
+		</dict>
+	</array>
+</dict>
+</plist>

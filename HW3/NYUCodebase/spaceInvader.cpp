@@ -37,7 +37,7 @@ void SpaceInvader::Init(){
     glMatrixMode(GL_MODELVIEW);
     
     background = LoadTexture("doge.png");
-    background2 = LoadTexture("back2.png");
+    //background2 = LoadTexture("back2.png");
     background3 = LoadTexture("Kitty-looking-so-cute-with-ear-cap.png");
     entity = LoadTexture("sheet.png");
     font = LoadTexture("font2.png");

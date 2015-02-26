@@ -16,6 +16,7 @@
 #include <cmath>
 #include <vector>
 #include <string>
+#include <iostream>
 #include "SpriteSheet.h"
 #include "entity.h"
 #include "bullet.h"

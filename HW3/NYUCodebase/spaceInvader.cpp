@@ -38,9 +38,9 @@ void SpaceInvader::Init(){
     
     background = LoadTexture("doge.png");
     background2 = LoadTexture("back2.png");
-    background3 = LoadTexture("doge-pattern-27481-2880x1800.jpg");
+    background3 = LoadTexture("Kitty-looking-so-cute-with-ear-cap.png");
     entity = LoadTexture("sheet.png");
-    font = LoadTexture("font1.png");
+    font = LoadTexture("font2.png");
     
     SpriteSheet backgroundSpriteSheet = SpriteSheet(background, 0.0f, 0.0f,  1920.0f/1920.0f,  900.0f/1080.0f);
     Entity* main_menu = new Entity(backgroundSpriteSheet, 0.0f, 0.0f, 1.33f, 0.0f, 0.0f, 0.0f, 0.0f);
@@ -59,14 +59,34 @@ void SpaceInvader::Init(){
     entities.push_back(player);
     
     SpriteSheet enemySpriteSheet = SpriteSheet(entity, 222.0/1024.0f, 0.0/1024.0f,  103.0/1024.0f,  84.0/1024.0f);
-    for (int i =0; i < 20; i++){
+    for (int i =0; i < 40; i++){
         if(i < 6){
-            Entity* enemy = new Entity(enemySpriteSheet, -i*0.2, 0.8f, 0.5f, 180.0f, 0.0f, 0.0f, 0.0f);
+            Entity* enemy = new Entity(enemySpriteSheet, -i*0.2, 0.8f, 0.5f, 180.0f, 0.0f, 0.2f, 0.1f);
             entities.push_back(enemy);
-        }else{
-            Entity* enemy = new Entity(enemySpriteSheet, (i-5)*0.2, 0.8f, 0.5f, 180.0f, 0.0f, 0.0f, 0.0f);
+        }else if (i <10 && i>=6){
+            Entity* enemy = new Entity(enemySpriteSheet, (i-5)*0.2, 0.8f, 0.5f, 180.0f, 0.0f, 0.2f, 0.1f);
+            entities.push_back(enemy);
+        }else if (i >=10 && i < 16){
+            Entity* enemy = new Entity(enemySpriteSheet, -(i-10)*0.2, 0.7f, 0.5f, 180.0f, 0.0f, 0.2f, 0.1f);
             entities.push_back(enemy);
         }
+        else if (i >=16 && i < 20){
+            Entity* enemy = new Entity(enemySpriteSheet, (i-15)*0.2, 0.7f, 0.5f, 180.0f, 0.0f, 0.2f, 0.1f);
+            entities.push_back(enemy);
+        } else if (i >= 20&& i < 26){
+            Entity* enemy = new Entity(enemySpriteSheet, -(i-20)*0.2, 0.6f, 0.5f, 180.0f, 0.0f, 0.2f, 0.1f);
+            entities.push_back(enemy);
+        } else if (i >= 26&& i < 30){
+            Entity* enemy = new Entity(enemySpriteSheet, (i-25)*0.2, 0.6f, 0.5f, 180.0f, 0.0f, 0.2f, 0.1f);
+            entities.push_back(enemy);
+        }else if (i >= 30&& i < 36){
+            Entity* enemy = new Entity(enemySpriteSheet, -(i-30)*0.2, 0.5f, 0.5f, 180.0f, 0.0f, 0.2f, 0.1f);
+            entities.push_back(enemy);
+        }else if (i >= 36&& i <= 40){
+            Entity* enemy = new Entity(enemySpriteSheet, (i-35)*0.2, 0.5f, 0.5f, 180.0f, 0.0f, 0.2f, 0.1f);
+            entities.push_back(enemy);
+        }
+
     }
     bullet = LoadTexture("sheet.png");
 }
@@ -118,7 +138,7 @@ void SpaceInvader::Update(float elapsed){
 
 void SpaceInvader::RenderGameLevel(){
     //backgrounds[1]->Render();
-    for(int i = 0; i < 12; i++){
+    for(int i = 0; i < entities.size(); i++){
         entities[i]->Render();
     }
     DrawText(font, "score: " + to_string(score) , 0.1f, -0.06, 1.0, 0.5, 0.5, 1.0, -1.0, 0.9);
@@ -134,8 +154,10 @@ void SpaceInvader::RenderGameOver(){
 }
 void SpaceInvader::RenderMainMenu(){
    // backgrounds[0]->Render();
-    DrawText(font, "Press enter to start Space Invader", 0.1f, -0.06, 0.5, 0.5, 0.5, 1.0, -0.6, 0.5);
-    DrawText(font, "A: left  D: right SPACE: shoot", 0.1f, -0.06, 1.0, 0.5, 0.5, 1.0, -0.5, -0.0);
+    DrawText(font, "Press ENTER to start Space Invader", 0.1f, -0.04, 0.5, 0.5, 0.5, 1.0, -1.0, 0.5);
+    DrawText(font, "A: left  D: right ", 0.1f, -0.04, 1.0, 0.5, 0.5, 1.0, -0.45, -0.0);
+    DrawText(font, "Too many bullets ", 0.1f, -0.04, 1.0, 0.5, 0.5, 1.0, -0.45, -0.5);
+
     SDL_GL_SwapWindow(displayWindow);
 }
 
@@ -155,6 +177,7 @@ void SpaceInvader::UpdateMainMenu(float elapsed) {
 }
 void SpaceInvader::UpdateGameLevel(float elapsed) {
     while (SDL_PollEvent(&event)) {
+       // shootBullet(elapsed);
         if (event.type == SDL_QUIT || event.type == SDL_WINDOWEVENT_CLOSE) {
             done = true;
         }
@@ -163,22 +186,25 @@ void SpaceInvader::UpdateGameLevel(float elapsed) {
                 if ((entities[0]->x) > (-1.2f)) {
                     entities[0]->x -= (elapsed*entities[0]->velocity_x);
                 }
+                shootBullet(elapsed);
+
             }
             else if (event.key.keysym.scancode == SDL_SCANCODE_D) {
                 if ((entities[0]->x) < (1.2f)) {
                     entities[0]->x += (entities[0]->speed);
                 }
-            }
-            else if (event.key.keysym.scancode == SDL_SCANCODE_SPACE&&SDL_SCANCODE_A){
                 shootBullet(elapsed);
+
             }
+//            else if (event.key.keysym.scancode == SDL_SCANCODE_SPACE){
+//                shootBullet(elapsed);
+//            }
         }
     }
     
-    for (unsigned int i = 1; i < entities.size(); i++){
-        
+    for (int i = 1; i < entities.size(); i++){
         if ((entities[i]->x> 1.25) || (entities[i]->x < -1.25)) {
-            for (unsigned int j = 1; j < entities.size(); j++){
+            for (int j = 1; j < entities.size(); j++){
                 entities[j]->velocity_x *= -1.0f;
                 entities[j]->y -= entities[j]->velocity_y;
             }
@@ -197,15 +223,15 @@ void SpaceInvader::UpdateGameLevel(float elapsed) {
         }
     }
     
-    for (unsigned int i = 1; i < entities.size(); i++){
+    for (int i = 1; i < entities.size(); i++){
         entities[i]->Update(elapsed);
     }
     
-    for (unsigned int i = 0; i < 30; i++){
+    for (int i = 0; i < MAX_BULLETS; i++){
         bullets[i].Update(elapsed);
     }
     
-    if (entities.size() <= 1 || score==120) {
+    if (entities.size() <= 1) {
         win = true;
         state = GAME_OVER;
     }
@@ -242,20 +268,10 @@ bool SpaceInvader::CollisionDetect(Entity& entity, Bullet& bullet) {
     float bullet_right = bullet.x + (bullet.sprite.width / 2.0f);
     float bullet_left = bullet.x - (bullet.sprite.width / 2.0f);
     
-    if (entity_bot > bullet_top) {
+    if (entity_bot > bullet_top||entity_top < bullet_bot||entity_left > bullet_right||entity_right < bullet_left) {
         return false;
     }
-    else if (entity_top < bullet_bot) {
-        return false;
-    }
-    else if (entity_left > bullet_right){
-        return false;
-    }
-    else if (entity_right < bullet_left) {
-        return false;
-    }else{
-        return true;
-    }
+return true;
 }
 
 void SpaceInvader::DrawText(int fontTexture, string text, float size, float spacing, float r, float g, float b, float a, float x, float y) {

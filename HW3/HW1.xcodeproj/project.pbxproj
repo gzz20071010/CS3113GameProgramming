@@ -14,13 +14,9 @@
 		1776B11A1A9A908F003070BC /* SpriteSheet.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1776B1181A9A908F003070BC /* SpriteSheet.cpp */; };
 		1776B11D1A9A91BB003070BC /* spaceInvader.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1776B11B1A9A91BB003070BC /* spaceInvader.cpp */; };
 		1776B11F1A9A9E82003070BC /* background.png in Resources */ = {isa = PBXBuildFile; fileRef = 1776B11E1A9A9E82003070BC /* background.png */; };
-		1776B1211A9D10B5003070BC /* back2.png in Resources */ = {isa = PBXBuildFile; fileRef = 1776B1201A9D10B5003070BC /* back2.png */; };
 		1776B1231A9D1801003070BC /* sheet.png in Resources */ = {isa = PBXBuildFile; fileRef = 1776B1221A9D1801003070BC /* sheet.png */; };
-		1776B1251A9E8790003070BC /* doge-pattern-27481-2880x1800.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 1776B1241A9E8790003070BC /* doge-pattern-27481-2880x1800.jpg */; };
 		1776B1271A9E8828003070BC /* doge.png in Resources */ = {isa = PBXBuildFile; fileRef = 1776B1261A9E8828003070BC /* doge.png */; };
-		17F440801A8821A30037FDFC /* transparentLight26.png in Resources */ = {isa = PBXBuildFile; fileRef = 17F4407D1A8821A30037FDFC /* transparentLight26.png */; };
-		17F440811A8821A30037FDFC /* transparentLight27.png in Resources */ = {isa = PBXBuildFile; fileRef = 17F4407E1A8821A30037FDFC /* transparentLight27.png */; };
-		17F440821A8821A30037FDFC /* transparentLight28.png in Resources */ = {isa = PBXBuildFile; fileRef = 17F4407F1A8821A30037FDFC /* transparentLight28.png */; };
+		1776B1291A9FB63C003070BC /* Kitty-looking-so-cute-with-ear-cap.png in Resources */ = {isa = PBXBuildFile; fileRef = 1776B1281A9FB63C003070BC /* Kitty-looking-so-cute-with-ear-cap.png */; };
 		6D5A86AE19AE5C710066C1FD /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6D5A86AD19AE5C710066C1FD /* Cocoa.framework */; };
 		6D5A86B819AE5C710066C1FD /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 6D5A86B619AE5C710066C1FD /* InfoPlist.strings */; };
 		6D5A86BA19AE5C710066C1FD /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 6D5A86B919AE5C710066C1FD /* main.cpp */; };
@@ -43,13 +39,9 @@
 		1776B11B1A9A91BB003070BC /* spaceInvader.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = spaceInvader.cpp; sourceTree = "<group>"; };
 		1776B11C1A9A91BB003070BC /* spaceInvader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = spaceInvader.h; sourceTree = "<group>"; };
 		1776B11E1A9A9E82003070BC /* background.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = background.png; path = ../../../../Desktop/background.png; sourceTree = "<group>"; };
-		1776B1201A9D10B5003070BC /* back2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = back2.png; path = ../../../../Desktop/back2.png; sourceTree = "<group>"; };
 		1776B1221A9D1801003070BC /* sheet.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = sheet.png; sourceTree = "<group>"; };
-		1776B1241A9E8790003070BC /* doge-pattern-27481-2880x1800.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "doge-pattern-27481-2880x1800.jpg"; sourceTree = "<group>"; };
 		1776B1261A9E8828003070BC /* doge.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = doge.png; sourceTree = "<group>"; };
-		17F4407D1A8821A30037FDFC /* transparentLight26.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = transparentLight26.png; sourceTree = "<group>"; };
-		17F4407E1A8821A30037FDFC /* transparentLight27.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = transparentLight27.png; sourceTree = "<group>"; };
-		17F4407F1A8821A30037FDFC /* transparentLight28.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = transparentLight28.png; sourceTree = "<group>"; };
+		1776B1281A9FB63C003070BC /* Kitty-looking-so-cute-with-ear-cap.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Kitty-looking-so-cute-with-ear-cap.png"; sourceTree = "<group>"; };
 		6D5A86AA19AE5C710066C1FD /* HW1.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HW1.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6D5A86AD19AE5C710066C1FD /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
 		6D5A86B019AE5C710066C1FD /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
@@ -134,16 +126,12 @@
 		6D5A86B419AE5C710066C1FD /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				1776B1281A9FB63C003070BC /* Kitty-looking-so-cute-with-ear-cap.png */,
 				1776B1261A9E8828003070BC /* doge.png */,
-				1776B1241A9E8790003070BC /* doge-pattern-27481-2880x1800.jpg */,
-				1776B1201A9D10B5003070BC /* back2.png */,
 				1776B1221A9D1801003070BC /* sheet.png */,
 				1776B11E1A9A9E82003070BC /* background.png */,
 				1776B10E1A994B67003070BC /* font1.png */,
 				1776B10F1A994B67003070BC /* font2.png */,
-				17F4407D1A8821A30037FDFC /* transparentLight26.png */,
-				17F4407E1A8821A30037FDFC /* transparentLight27.png */,
-				17F4407F1A8821A30037FDFC /* transparentLight28.png */,
 				6D5A86C519AE5C710066C1FD /* Images.xcassets */,
 				6D5A86B519AE5C710066C1FD /* HW1-Info.plist */,
 				6D5A86B619AE5C710066C1FD /* InfoPlist.strings */,
@@ -221,17 +209,13 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1776B1211A9D10B5003070BC /* back2.png in Resources */,
 				6D5A86B819AE5C710066C1FD /* InfoPlist.strings in Resources */,
-				17F440821A8821A30037FDFC /* transparentLight28.png in Resources */,
 				1776B1271A9E8828003070BC /* doge.png in Resources */,
 				6D5A86C619AE5C710066C1FD /* Images.xcassets in Resources */,
 				1776B1231A9D1801003070BC /* sheet.png in Resources */,
-				17F440801A8821A30037FDFC /* transparentLight26.png in Resources */,
-				17F440811A8821A30037FDFC /* transparentLight27.png in Resources */,
 				1776B1111A994B67003070BC /* font2.png in Resources */,
-				1776B1251A9E8790003070BC /* doge-pattern-27481-2880x1800.jpg in Resources */,
 				1776B11F1A9A9E82003070BC /* background.png in Resources */,
+				1776B1291A9FB63C003070BC /* Kitty-looking-so-cute-with-ear-cap.png in Resources */,
 				1776B1101A994B67003070BC /* font1.png in Resources */,
 				6D5A86BE19AE5C710066C1FD /* Credits.rtf in Resources */,
 			);

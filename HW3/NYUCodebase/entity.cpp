@@ -14,8 +14,6 @@ void Entity::Render() {
     sprite.Draw(x, y, scale, rotation);
 }
 void Entity::Update(float elapsed) {
-    if (true){
         x += (velocity_x * elapsed);
-    }
 }
 

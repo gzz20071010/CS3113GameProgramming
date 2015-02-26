@@ -16,18 +16,19 @@ public:
     Entity(SpriteSheet sprite, float x, float y, float scale, float rotation, float speed, float velocity_x, float velocity_y);
    // ~Entity();
     SpriteSheet sprite;
-    float x = 0.0f;
-    float y = 0.0f;
-    float scale = 1.0f;
-    float rotation = 0.0f;
+    float x ;
+    float y;
+    float scale ;
+    float rotation ;
     
     // Variables used for moving the Entity
-    float speed = 0.1f;
-    float velocity_x = 0.3f;
-    float velocity_y = 0.2f;
+    float speed ;
+    float velocity_x ;
+    float velocity_y ;
     
     void Render();
     void Update(float elapsed);
+    void fire();
 };
 
 #endif /* defined(__HW1__entity__) */

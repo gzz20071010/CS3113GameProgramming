@@ -2,6 +2,8 @@
 #include <SDL.h>
 #include <SDL_opengl.h>
 #include <SDL_image.h>
+#include <vector>
+#include <String>
 
 SDL_Window* displayWindow;
 GLuint LoadTexture(const char *image_path) {
@@ -48,6 +50,34 @@ void DrawTriangle(){
     glColorPointer(3, GL_FLOAT, 0, triangleColors);
     glEnableClientState(GL_COLOR_ARRAY);
     glDrawArrays(GL_TRIANGLES, 0, 3);
+    glDisableClientState(GL_COLOR_ARRAY);
+}
+void DrawText(int fontTexture, std::string text, float size, float spacing, float r, float g, float b, float a) {
+    glBindTexture(GL_TEXTURE_2D, fontTexture);
+    glEnable(GL_TEXTURE_2D);
+    glEnable(GL_BLEND);
+    glBlendFunc(GL_SRC_ALPHA, GL_ONE_MINUS_SRC_ALPHA);
+    float texture_size = 1.0/16.0f;
+    std::vector<float> vertexData;
+    std::vector<float> texCoordData;
+    std::vector<float> colorData;
+    for(int i=0; i < text.size(); i++) {
+        float texture_x = (float)(((int)text[i]) % 16) / 16.0f;
+        float texture_y = (float)(((int)text[i]) / 16) / 16.0f;
+        colorData.insert(colorData.end(), {r,g,b,a, r,g,b,a, r,g,b,a, r,g,b,a});
+        vertexData.insert(vertexData.end(), {((size+spacing) * i) + (-0.5f * size), 0.5f * size, ((size+spacing) * i) +
+            (-0.5f * size), -0.5f * size, ((size+spacing) * i) + (0.5f * size), -0.5f * size, ((size+spacing) * i) + (0.5f * size), 0.5f
+            * size});
+        texCoordData.insert(texCoordData.end(), {texture_x, texture_y, texture_x, texture_y + texture_size, texture_x +
+            texture_size, texture_y + texture_size, texture_x + texture_size, texture_y});
+}
+    glColorPointer(4, GL_FLOAT, 0, colorData.data());
+    glEnableClientState(GL_COLOR_ARRAY);
+    glVertexPointer(2, GL_FLOAT, 0, vertexData.data());
+    glEnableClientState(GL_VERTEX_ARRAY);
+    glTexCoordPointer(2, GL_FLOAT, 0, texCoordData.data());
+    glEnableClientState(GL_TEXTURE_COORD_ARRAY);
+    glDrawArrays(GL_QUADS, 0, text.size() * 4.0);
 }
 
 int main(int argc, char *argv[])
@@ -80,12 +110,11 @@ int main(int argc, char *argv[])
         glClearColor(0.8f, 0.8f, 0.6f, 1.0f);
         rotation += elapsed;
 
-        DrawSprite(LoadTexture("transparentLight26.png"), 0.5, 0.5, 0);
-        DrawSprite(LoadTexture("transparentLight27.png"), -0.5, -0.5, rotation);
-        DrawSprite(LoadTexture("transparentLight28.png"), -0.0, -0.0, -rotation);
-        DrawTriangle();
-
-
+//        DrawSprite(LoadTexture("transparentLight26.png"), 0.5, 0.5, 0);
+//        DrawSprite(LoadTexture("transparentLight27.png"), -0.5, -0.5, rotation);
+//        DrawSprite(LoadTexture("transparentLight28.png"), -0.0, -0.0, -rotation);
+//        DrawTriangle();
+        
         SDL_GL_SwapWindow(displayWindow);
     }
     

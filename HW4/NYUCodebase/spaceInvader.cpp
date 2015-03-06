@@ -154,7 +154,9 @@ void SpaceInvader::Render(){
     
     glClear(GL_COLOR_BUFFER_BIT);
     //backgrounds[0]->Render();
-    DrawText(font, "Find you little alien friend",  0.3, -0.21, 1.0, 1.0, 1.0, 1.0, -1.3f, 1.5);
+    DrawText(font, "Find little alien friend",  0.3, -0.21, 1.0, 1.0, 1.0, 1.0, -0.9f, 1.5);
+    DrawText(font, "control: W-> jump A-> left D-> right",  0.3, -0.19, 1.0, 1.0, 1.0, 1.0, -1.8f, 1.3);
+
     for (int i=0; i<entities.size(); i++) {
         entities[i]->Render();
         if(i==2){

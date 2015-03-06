@@ -45,7 +45,7 @@ void SpaceInvader::Init(){
     backgrounds.push_back(game_level);
     
     SpriteSheet player =  SpriteSheet(entity2, 438.0f/508.0f, 73.0f/228.0f, 67.0f/508.0f, 94.0f/290.0f);
-    Entity* derpKidEntity = new Entity(player, 0.0f, 2.0f, 0.5f, 0.0f, 1.0f, 0.0f, 0.0f, false);
+    Entity* derpKidEntity = new Entity(player, -1.6, 2.0f, 0.5f, 0.0f, 1.0f, 0.0f, 0.0f, false);
     entities.push_back(derpKidEntity);
     
 
@@ -86,9 +86,11 @@ void SpaceInvader::Init(){
         cout<<"==================";
 
     }
-//    SpriteSheet friends =  SpriteSheet(derpkid, 0.0f/2048.0, 770.0f/2048.0, 220.f/2048.0, 140.0f/2048.0f);
-//    Entity* derpKidFriends = new Entity(friends, 1.0, 0.2f, 1.0f, 0.0f, 1.0f, 0.0f, 0.0f, true);
-//    entities.push_back(derpKidFriends);
+    //p1_front = 0 196 66 92
+
+    SpriteSheet friends =  SpriteSheet(entity2, 0.0f/508.0f, 150.0f/228.0f, 66.0f/508.0f, 92.0f/290.0f);
+    Entity* derpKidFriends = new Entity(friends, 1.6, 0.2f, 0.5f, 0.0f, 1.0f, 0.0f, 0.0f, false);
+    entities.push_back(derpKidFriends);
     
 }
 
@@ -152,18 +154,27 @@ void SpaceInvader::Render(){
     
     glClear(GL_COLOR_BUFFER_BIT);
     //backgrounds[0]->Render();
+    DrawText(font, "Find you little alien friend",  0.3, -0.21, 1.0, 1.0, 1.0, 1.0, -1.3f, 1.5);
     for (int i=0; i<entities.size(); i++) {
         entities[i]->Render();
         if(i==2){
-            cout<<entities[2]->x<<"entities[2]->x "<<entities[2]->y<<" entities[2]->y "<<endl;
-            cout<<"stair # 2 where did you go?"<<endl;
+           // cout<<entities[2]->x<<"entities[2]->x "<<entities[2]->y<<" entities[2]->y "<<endl;
+           // cout<<"stair # 2 where did you go?"<<endl;
         }
         //cout<<"entity #"<<i<<" rendered"<<endl;
     }
+    if (win == true){
+        DrawText(font, "Hello", 0.3, -0.2, 1.0f, 0.0, 0.0, 1.0, 1.6,  -1.4);
+            //void SpaceInvader::DrawText(int fontTexture, string text, float size, float spacing, float r, float g, float b, float a, float x, float y) {
+        
+    }
+
     SDL_GL_SwapWindow(displayWindow);
 }
 
 void SpaceInvader::Update(float elapsed){
+    for(int i =0 ; i<entities.size(); i++){
+    }
 }
 
 
@@ -256,10 +267,10 @@ void SpaceInvader::FixedUpdate(){
 
 //            entities[0]->y += yPenetration + 0.001f;
 //            
-//        }
+    //        }                        DrawText(font, "hello", 0.3, -0.2, 1.0, 0.5, 0.5, 0.5, 1.4, -1.1);
 
     for (size_t i = 0; i < entities.size(); i++) {
-        
+
         if (entities[i]->collidedBot) {
             entities[i]->inJump = false;	// the entity is no longer jumping
             entities[i]->velocity_y = 0.0f; // stop the entity
@@ -270,12 +281,12 @@ void SpaceInvader::FixedUpdate(){
             entities[i]->acceleration_y = 0.0f;
         }
         if (entities[i]->collidedLeft) {
-            cout<<"whats there on the left?"<<endl;
+           // cout<<"whats there on the left?"<<endl;
             entities[i]->velocity_x = 0.0f;
             entities[i]->acceleration_x = 0.0f;
         }
         if (entities[i]->collidedRight) {
-            cout<<"whats there on the right?"<<endl;
+            //cout<<"whats there on the right?"<<endl;
 
             entities[i]->velocity_x = 0.0f; // prevent the entity from going through wall
             entities[i]->acceleration_x = 0.0f;
@@ -300,20 +311,21 @@ void SpaceInvader::FixedUpdate(){
                 if (CollisionDetect(*entities[i], *entities[j]) && (entities[i] != entities[j])) {
                     // There is a collision and it's not the entity interacting with itself
                  //   cout<<"Still alive!!!"<<endl;
-
                     float yPenetration = fabs(fabs(entities[j]->y - entities[i]->y)
                                               - (entities[i]->sprite.height  *0.5)
                                               - entities[j]->sprite.height   *0.5);
-                    
+                    if(i ==0 && j == 20){
+                        cout<<"||||||||||||hello||||||||||||"<<endl;
+                        win = true;
+                        //void SpaceInvader::DrawText(int fontTexture, string text, float size, float spacing, float r, float g, float b, float a, float x, float y) {
+                    }
                     if (entities[i]->y > entities[j]->y) {
                         entities[i]->y += yPenetration + 0.001f;
                         entities[i]->collidedBot = true;
-                        
                     }
-                    else {
+                    else if(entities[i]->y <entities[j]->y) {
                         entities[i]->y -= yPenetration + 0.001f;
                         entities[i]->collidedTop = true;
-                        
                         
                     }
                 }
@@ -328,14 +340,19 @@ void SpaceInvader::FixedUpdate(){
                     float xPenetration = fabs(fabs(entities[j]->x - entities[i]->x)
                                               - (entities[i]->sprite.width  *0.5)
                                               - (entities[j]->sprite.width *0.5));
-                    cout<<"entity i scale is :"<<entities[i]->scale<<endl;
-                    cout<<"entity j scale is :"<<entities[j]->scale<<endl;
-                    cout<<"entity i width is :"<<entities[i]->sprite.width<<endl;
-                    cout<<"entity j width is :"<<entities[j]->sprite.width<<endl;
-                    cout<<"entity i x is :"<<entities[i]->x<<endl;
-                    cout<<"entity j x is :"<<entities[j]->x<<endl;
+//                    cout<<"entity i scale is :"<<entities[i]->scale<<endl;
+//                    cout<<"entity j scale is :"<<entities[j]->scale<<endl;
+//                    cout<<"entity i width is :"<<entities[i]->sprite.width<<endl;
+//                    cout<<"entity j width is :"<<entities[j]->sprite.width<<endl;
+//                    cout<<"entity i x is :"<<entities[i]->x<<endl;
+//                    cout<<"entity j x is :"<<entities[j]->x<<endl;
 
+                    if(i ==0 && j == 20){
 
+                        cout<<"||||||||||||hello||||||||||||"<<endl;
+                        win =true;
+                        //void SpaceInvader::DrawText(int fontTexture, string text, float size, float spacing, float r, float g, float b, float a, float x, float y) {
+                    }
                     
                     if (entities[i]->x > entities[j]->x) {
                         entities[i]->x += xPenetration + 0.001f;
@@ -348,7 +365,7 @@ void SpaceInvader::FixedUpdate(){
                                           }
                 }
             }
-        }	
+        }
     }
         //make player move. the problem is what is speed, velocity. speed initial 1.0, velocity initial 1.0;
         

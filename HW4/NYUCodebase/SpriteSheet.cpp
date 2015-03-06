@@ -12,18 +12,18 @@ SpriteSheet::SpriteSheet() {}
 SpriteSheet::SpriteSheet(unsigned int textureID, float u, float v, float width, float height) : textureID(textureID), u(u), v(v), width(width), height(height) {}
 
 void SpriteSheet::Draw(float x, float y, float scale, float rotation) {
-    if(x==0.2f&&y== -0.2f){
-        cout<<"hey i got x==0.2f && y == -0.2f"<<endl;
-    }
-    if(x==0.2f){
-        cout<<"when x == 0.2f, y value is: "<<y<<endl;
-    }
-    if(x==1.0f){
-        cout<<"when x == 1.0f, y value is: "<<y<<endl;
-    }
-    if(y==0.2f){
-        cout<<"when y == 0.2f, x value is: "<<x<<endl;
-    }
+//    if(x==0.2f&&y== -0.2f){
+//        cout<<"hey i got x==0.2f && y == -0.2f"<<endl;
+//    }
+//    if(x==0.2f){
+//        cout<<"when x == 0.2f, y value is: "<<y<<endl;
+//    }
+//    if(x==1.0f){
+//        cout<<"when x == 1.0f, y value is: "<<y<<endl;
+//    }
+//    if(y==0.2f){
+//        cout<<"when y == 0.2f, x value is: "<<x<<endl;
+//    }
     glEnable(GL_TEXTURE_2D);
     glBindTexture(GL_TEXTURE_2D, textureID);
     glMatrixMode(GL_MODELVIEW);

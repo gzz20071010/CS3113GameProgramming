@@ -16,22 +16,21 @@ public:
     void Render();
 	void buildMatrix();
 
-
 	SpriteSheet sprite;
 
-	float x = 0.0f;
-	float y = 0.0f;
-	float scale_x = 1.0f;
-	float scale_y = 1.0f;
-	float rotation = 0.0f;
+	float x;
+	float y;
+	float scale_x;
+	float scale_y;
+    float rotation;
 
-    float velocity_x = 0.0f;
-	float velocity_y = 0.0f;
-	float acceleration_x = 0.0f;
-	float acceleration_y = 0.0f;
-	float friction_x = 0.0f;
-	float friction_y = 0.0f;
-	float mass = 0.0f;
+    float velocity_x;
+    float velocity_y;
+    float acceleration_x;
+    float acceleration_y;
+    float friction_x;
+    float friction_y;
+    float mass;
 
 	bool isStatic = false;
 	bool collidedTop = false;

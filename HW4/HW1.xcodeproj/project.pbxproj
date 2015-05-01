@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		1776B1101A994B67003070BC /* font1.png in Resources */ = {isa = PBXBuildFile; fileRef = 1776B10E1A994B67003070BC /* font1.png */; };
 		1776B1141A9A87FD003070BC /* entity.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1776B1121A9A87FD003070BC /* entity.cpp */; };
 		1776B11A1A9A908F003070BC /* SpriteSheet.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1776B1181A9A908F003070BC /* SpriteSheet.cpp */; };
 		1776B11D1A9A91BB003070BC /* spaceInvader.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1776B11B1A9A91BB003070BC /* spaceInvader.cpp */; };
@@ -15,6 +14,7 @@
 		17E4DD5B1AA50F6F009C0E35 /* spritesheet_elements.xml in Resources */ = {isa = PBXBuildFile; fileRef = 17E4DD5A1AA50F6F009C0E35 /* spritesheet_elements.xml */; };
 		17E4DD631AA525CA009C0E35 /* p1_spritesheet.png in Resources */ = {isa = PBXBuildFile; fileRef = 17E4DD621AA525CA009C0E35 /* p1_spritesheet.png */; };
 		17E4DD651AA525D4009C0E35 /* p1_spritesheet.txt in Resources */ = {isa = PBXBuildFile; fileRef = 17E4DD641AA525D4009C0E35 /* p1_spritesheet.txt */; };
+		17FC7BFA1AF3120500755F7B /* font1.png in Resources */ = {isa = PBXBuildFile; fileRef = 17FC7BF91AF3120500755F7B /* font1.png */; };
 		6D5A86AE19AE5C710066C1FD /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6D5A86AD19AE5C710066C1FD /* Cocoa.framework */; };
 		6D5A86B819AE5C710066C1FD /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 6D5A86B619AE5C710066C1FD /* InfoPlist.strings */; };
 		6D5A86BA19AE5C710066C1FD /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 6D5A86B919AE5C710066C1FD /* main.cpp */; };
@@ -26,7 +26,6 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		1776B10E1A994B67003070BC /* font1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = font1.png; path = ../../../CS3113/assets/fonts/font1.png; sourceTree = "<group>"; };
 		1776B1121A9A87FD003070BC /* entity.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = entity.cpp; sourceTree = "<group>"; };
 		1776B1131A9A87FD003070BC /* entity.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = entity.h; sourceTree = "<group>"; };
 		1776B1181A9A908F003070BC /* SpriteSheet.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = SpriteSheet.cpp; sourceTree = "<group>"; };
@@ -37,6 +36,7 @@
 		17E4DD5A1AA50F6F009C0E35 /* spritesheet_elements.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = spritesheet_elements.xml; sourceTree = "<group>"; };
 		17E4DD621AA525CA009C0E35 /* p1_spritesheet.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = p1_spritesheet.png; sourceTree = "<group>"; };
 		17E4DD641AA525D4009C0E35 /* p1_spritesheet.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = p1_spritesheet.txt; sourceTree = "<group>"; };
+		17FC7BF91AF3120500755F7B /* font1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = font1.png; sourceTree = "<group>"; };
 		6D5A86AA19AE5C710066C1FD /* HW1.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HW1.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6D5A86AD19AE5C710066C1FD /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
 		6D5A86B019AE5C710066C1FD /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
@@ -121,11 +121,11 @@
 		6D5A86B419AE5C710066C1FD /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				17FC7BF91AF3120500755F7B /* font1.png */,
 				17E4DD621AA525CA009C0E35 /* p1_spritesheet.png */,
 				17E4DD641AA525D4009C0E35 /* p1_spritesheet.txt */,
 				17E4DD5A1AA50F6F009C0E35 /* spritesheet_elements.xml */,
 				17E4DD581AA50F61009C0E35 /* spritesheet_elements.png */,
-				1776B10E1A994B67003070BC /* font1.png */,
 				6D5A86C519AE5C710066C1FD /* Images.xcassets */,
 				6D5A86B519AE5C710066C1FD /* HW1-Info.plist */,
 				6D5A86B619AE5C710066C1FD /* InfoPlist.strings */,
@@ -204,9 +204,9 @@
 				17E4DD651AA525D4009C0E35 /* p1_spritesheet.txt in Resources */,
 				17E4DD5B1AA50F6F009C0E35 /* spritesheet_elements.xml in Resources */,
 				6D5A86B819AE5C710066C1FD /* InfoPlist.strings in Resources */,
+				17FC7BFA1AF3120500755F7B /* font1.png in Resources */,
 				17E4DD631AA525CA009C0E35 /* p1_spritesheet.png in Resources */,
 				6D5A86C619AE5C710066C1FD /* Images.xcassets in Resources */,
-				1776B1101A994B67003070BC /* font1.png in Resources */,
 				6D5A86BE19AE5C710066C1FD /* Credits.rtf in Resources */,
 				17E4DD591AA50F61009C0E35 /* spritesheet_elements.png in Resources */,
 			);

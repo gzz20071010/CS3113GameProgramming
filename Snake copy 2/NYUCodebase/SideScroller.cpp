@@ -1555,7 +1555,7 @@ void SideScroller::renderMainMenu() {
 	glLoadIdentity();
 
 	glTranslatef(-0.8f, 0.7f, 0.0f);
-	DrawText(fontSheetTexture, "Snake", 0.1, 0.0, 1.0, 1.0, 0.0, 1.0);
+	DrawText(fontSheetTexture, "Snake", 0.5, 0.0, 1.0, 1.0, 0.0, 1.0);
 	glLoadIdentity();
 	glTranslatef(-0.8f, 0.2f, 0.0f);
 	DrawText(fontSheetTexture, "Press Arrow Keys to Move", 0.05, 0.0, 1.0, 1.0, 1.0, 1.0);
@@ -1563,7 +1563,7 @@ void SideScroller::renderMainMenu() {
 	glTranslatef(-0.8f, 0.0f, 0.0f);
 	DrawText(fontSheetTexture, "", 0.05, 0.0, 1.0, 1.0, 1.0, 1.0);
 	glLoadIdentity();
-	glTranslatef(-0.8f, -0.7f, 0.0f);
+	glTranslatef(-0.8f, -0.0f, 0.0f);
 	DrawText(fontSheetTexture, "Press SPACE to start the game", 0.05, 0.0, 1.0, 1.0, 0.0, 1.0);
     
     

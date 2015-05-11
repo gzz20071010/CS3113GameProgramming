@@ -2,6 +2,8 @@
 #include "SideScroller.h"
 #define NDEBUG
 #include <assert.h>
+//for read tile map, use absolute path
+
 
 float SideScroller::genRandomNum(float low, float high) {
     return low + static_cast <float> (rand()) / (static_cast <float> (RAND_MAX / (high - low)));
@@ -214,7 +216,7 @@ void SideScroller::Init() {
     
     //music
     Mix_OpenAudio(44100, MIX_DEFAULT_FORMAT, 2, 4096 );
-    shoot = Mix_LoadWAV("/Users/shengxiangguo/Desktop/CS3113_hw5_resource/jump.wav");
+    shoot  = Mix_LoadWAV("pling9.wav");
     shoot1 = Mix_LoadWAV("pling1.wav");
     shoots.push_back(shoot1);
     shoot2 = Mix_LoadWAV("pling2.wav");
@@ -238,8 +240,6 @@ void SideScroller::Init() {
     shoot8 = Mix_LoadWAV("pling8.wav");
     shoots.push_back(shoot8);
 
-    shoot9 = Mix_LoadWAV("pling9.wav");
-    shoots.push_back(shoot9);
 
     shoot10 = Mix_LoadWAV("pling10.wav");
     shoots.push_back(shoot10);
@@ -568,7 +568,10 @@ void SideScroller::generateDiamonds(){
 
 void SideScroller::buildLevel() {
 	// read tile file
-    ifstream infile("/Users/shengxiangguo/Documents/XCODE/snake/NYUCodebase/untitled.txt");
+    
+    //i used the line below to call infile with absolute path
+    //ifstream infile("/Users/shengxiangguo/Documents/XCODE/snake/NYUCodebase/untitled.txt");
+    ifstream infile("untitled.txt");
     if(!infile.is_open()){
         cout<<"file not open"<<endl;
     }
@@ -1552,13 +1555,13 @@ void SideScroller::renderMainMenu() {
 	glLoadIdentity();
 
 	glTranslatef(-0.8f, 0.7f, 0.0f);
-	DrawText(fontSheetTexture, "SideScroller", 0.1, 0.0, 1.0, 1.0, 0.0, 1.0);
+	DrawText(fontSheetTexture, "Snake", 0.1, 0.0, 1.0, 1.0, 0.0, 1.0);
 	glLoadIdentity();
 	glTranslatef(-0.8f, 0.2f, 0.0f);
 	DrawText(fontSheetTexture, "Press Arrow Keys to Move", 0.05, 0.0, 1.0, 1.0, 1.0, 1.0);
 	glLoadIdentity();
 	glTranslatef(-0.8f, 0.0f, 0.0f);
-	DrawText(fontSheetTexture, "Press Z to shoot", 0.05, 0.0, 1.0, 1.0, 1.0, 1.0);
+	DrawText(fontSheetTexture, "", 0.05, 0.0, 1.0, 1.0, 1.0, 1.0);
 	glLoadIdentity();
 	glTranslatef(-0.8f, -0.7f, 0.0f);
 	DrawText(fontSheetTexture, "Press SPACE to start the game", 0.05, 0.0, 1.0, 1.0, 0.0, 1.0);

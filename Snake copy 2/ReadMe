@@ -1,0 +1,8 @@
+1. automatically shoots bullet 
+2. kill single enemy will generate a teammate.
+3. collect teammates.
+4. kill 50 enemies will go to level 2.
+5. level 2 enemies shoots bullets.
+6. kill 20 enemies game over. 
+
+ps: used absolute path to read in tile map.

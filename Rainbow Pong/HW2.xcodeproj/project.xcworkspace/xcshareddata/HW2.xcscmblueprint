@@ -1,0 +1,30 @@
+{
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "516637673EEE6E8CB8FDBD67C37A80F2C33C91DF",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
+
+  },
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
+    "516637673EEE6E8CB8FDBD67C37A80F2C33C91DF" : 0,
+    "651E2F8641B126D1334D5DF735062A462B9756DD" : 0
+  },
+  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "40DC6D8E-BD16-4A49-B630-04F2583AFD14",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
+    "516637673EEE6E8CB8FDBD67C37A80F2C33C91DF" : "CS3113GameProgramming",
+    "651E2F8641B126D1334D5DF735062A462B9756DD" : "ShunmanTse-CS3113-HW2"
+  },
+  "DVTSourceControlWorkspaceBlueprintNameKey" : "HW2",
+  "DVTSourceControlWorkspaceBlueprintVersion" : 204,
+  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "HW2\/HW2.xcodeproj",
+  "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/gzz20071010\/CS3113GameProgramming.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "516637673EEE6E8CB8FDBD67C37A80F2C33C91DF"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/RiasKlein\/ShunmanTse-CS3113-HW2.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "651E2F8641B126D1334D5DF735062A462B9756DD"
+    }
+  ]
+}
